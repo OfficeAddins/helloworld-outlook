@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<OfficeApp 
+  xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" 
+  xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides" 
+  xsi:type="MailApp"> 
+
+  <Id>1cd3ac07-696b-4f01-a478-9cea6122c982</Id> 
+  <Version>1.0.0.0</Version> 
+  <ProviderName>Better Solutions Limited</ProviderName> 
+  <DefaultLocale>en-US</DefaultLocale> 
+  <DisplayName DefaultValue="OutlookJavaScriptAddIn1" /> 
+  <Description DefaultValue="OutlookJavaScriptAddIn1"/> 
+  <SupportUrl DefaultValue="https://bettersolutions.com"/> 
+  <AppDomains> 
+    <AppDomain>AppDomain1</AppDomain> 
+  </AppDomains> 
+  <Hosts>
+     <Host Name="Mailbox" />
+  </Hosts>
+
+  <Requirements> 
+    <Sets> 
+      <Set Name="Mailbox" MinVersion="1.1" /> 
+    </Sets> 
+  </Requirements> 
+
+  <FormSettings>
+    <Form xsi:type="ItemRead">
+       <DesktopSettings>
+         <SourceLocation DefaultValue="https://bettersolutions.com/github/helloworld-outlook/index.html" />
+         <RequestedHeight>250</RequestedHeight> 
+       </DesktopSettings>
+    </Form>
+  </FormSettings>
+
+  <Permissions>ReadItem</Permissions>
+
+  <Rule xsi:type="ItemIs" ItemType="Message" FormType="Read" />
+</OfficeApp> 
